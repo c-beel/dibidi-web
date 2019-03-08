@@ -4,20 +4,26 @@
 
 .App-logo {
   animation: App-logo-spin infinite 10s linear;
-  height: 80px;
+  height: 60px;
   float: right;
 }
 
 .App-header {
   background-color: #5af;
-  height: 150px;
-  padding: 20px;
+  height: fix;
+  padding: 10px;
   color: black;
 }
 
+.App-title-box {
+  height: 60px;
+}
+
 .App-title {
-  font-size: 1.5em;
-  font-family: '%PUBLIC_URL%/BNarm.ttf';
+  font-size: 2em;
+  line-height: 60px;
+  vertical-align: middle;
+  font-family: "BNarm";
 }
 
 .App-intro {
@@ -61,4 +67,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(180deg); }
+}
+
+@font-face {
+  font-family: "BNarm";
+  src: url("static/fonts/BNarm.ttf");
 }

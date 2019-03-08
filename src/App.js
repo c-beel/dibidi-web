@@ -12,10 +12,11 @@ class App extends Component {
     return (
       <Container fluid>
         <Row className="App-header">
+          <Col sm="1"></Col>
           <Col xs="auto">
             <Image src={logo} className="App-logo" alt="logo" />
           </Col>
-          <Col xs="auto">
+          <Col xs="auto" className="App-title-box">
             <h1 className="App-title">دی‌بی‌دییییییی</h1>
           </Col>
         </Row>
