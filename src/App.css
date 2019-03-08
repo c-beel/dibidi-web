@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 10s linear;
+  height: 80px;
+  float: right;
+}
+
+.App-header {
+  background-color: #5af;
+  height: 150px;
+  padding: 20px;
+  color: black;
+}
+
+.App-title {
+  font-size: 1.5em;
+  font-family: '%PUBLIC_URL%/BNarm.ttf';
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.bgblack {
+  background-color: pink;
+}
+
+.Lessons-table {
+  text-align: right;
+  color: inherit;
+}
+
+.Lesson-text {
+  text-align: right;
+}
+
+.Page-title {
+  text-align: right;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.List-item-button {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  text-align: inherit;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+
+  &:focus, &:hover, &:visited, &:link, &:active {
+      text-decoration: none;
+      color: inherit;
+  }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); }
+}
