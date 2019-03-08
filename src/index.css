@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
   direction: rtl;
   color: lightblue;
+  zoom: 1;
 }
 
 td {

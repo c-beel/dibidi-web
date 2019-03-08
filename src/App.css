@@ -41,6 +41,8 @@
 
 .Lesson-text {
   text-align: right;
+  font-family: "BMitra";
+  font-size: 1.4em;
 }
 
 .Page-title {
@@ -72,4 +74,9 @@
 @font-face {
   font-family: "BNarm";
   src: url("static/fonts/BNarm.ttf");
+}
+
+@font-face {
+  font-family: "BMitra";
+  src: url("static/fonts/BMitra.ttf");
 }
