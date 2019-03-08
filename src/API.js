@@ -1,4 +1,4 @@
-let ServerAddress = "http://localhost:8080";
+let ServerAddress = "http://" + window.location.hostname + ":8080";
 
 export function get_lessons_list(resultHandler) {
   var xmlhttp = new XMLHttpRequest();
