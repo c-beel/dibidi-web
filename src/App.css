@@ -66,6 +66,15 @@
   }
 }
 
+.Edit-icon {
+  height: 20px;
+}
+
+.Add-icon {
+  height: 20px;
+  margin: 10px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(180deg); }

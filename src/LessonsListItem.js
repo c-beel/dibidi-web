@@ -1,18 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import styled from 'styled-components';
+import { Image } from 'react-bootstrap';
+import { StyledLink } from './StyledLink';
+import editIcon from './static/icons/edit.png';
 import './App.css';
-
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: inherit;
-
-    &:focus, &:hover, &:visited, &:link, &:active {
-        text-decoration: none;
-        color: inherit;
-    }
-`;
 
 export class LessonsListItem extends React.Component {
   render() {
@@ -20,10 +10,15 @@ export class LessonsListItem extends React.Component {
       <tr>
         <td width="10%"> {this.props.row_number} </td>
         <td>
-          <StyledLink to={"/lesson/" + this.props.row_number} style={{ textDecoration: 'none' }}>
+          <StyledLink to={"/lesson/" + this.props.row_number}>
             <button className="List-item-button">
               {this.props.title}
             </button>
+          </StyledLink>
+        </td>
+        <td width="5%">
+          <StyledLink to={"/lesson/" + this.props.row_number + "/edit"}>
+            <Image src={editIcon} className="Edit-icon" alt="Edit" />
           </StyledLink>
         </td>
       </tr>

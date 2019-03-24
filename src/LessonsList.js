@@ -4,6 +4,9 @@ import { LessonsListItem } from './LessonsListItem';
 import { PageTitle } from './PageTitle';
 import { get_lessons_list } from './API.js';
 import { Table, Row, Container } from 'reactstrap';
+import { Image } from 'react-bootstrap';
+import { StyledLink } from './StyledLink';
+import newIcon from './static/icons/new.png';
 import './App.css';
 
 export class LessonsList extends React.Component {
@@ -35,6 +38,9 @@ export class LessonsList extends React.Component {
       <Container fluid>
         <PageTitle>
           لیست دروس
+          <StyledLink to={"/lesson/add"}>
+            <Image src={newIcon} className="Add-icon" alt="New" />
+          </StyledLink>
         </PageTitle>
         <Row>
           <Table className="Lessons-table" hover borderless striped dark>
