@@ -6,6 +6,8 @@ import logo from './logo.svg';
 import './App.css';
 import { Container, Row, Col } from 'reactstrap';
 import { Image } from 'react-bootstrap';
+import { MarkdownEditor } from './MarkdownEditor/MarkdownEditor';
+import { add_lesson } from './API';
 
 class App extends Component {
   render() {
@@ -25,6 +27,8 @@ class App extends Component {
           <Col sm="8">
             <Switch>
               <Route exact path='/' component={LessonsList} />
+              <Route path='/lesson/add' render={(props) => <MarkdownEditor {...props} submitHandler={add_lesson} />} />
+              <Route path='/lesson/:lesson_id/edit' render={(props) => <MarkdownEditor {...props} submitHandler={add_lesson} />} />
               <Route path='/lesson/:lesson_id' component={Lesson} />
             </Switch>
           </Col>

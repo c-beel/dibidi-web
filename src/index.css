@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +9,7 @@ body {
   direction: rtl;
   color: lightblue;
   zoom: 1;
+  height: 100%;
 }
 
 td {

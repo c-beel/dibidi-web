@@ -1,0 +1,39 @@
+.IDE-container {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.Previewer-box {
+  margin-top: 10px;
+}
+
+.Editor {
+  background-color: inherit;
+  border: 1px solid black;
+  resize: none;
+  color: inherit;
+  min-height: 700px;
+  height: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 1.15em;
+}
+
+.Title {
+  background-color: inherit;
+  border: 1px solid black;
+  color: inherit;
+  font-size: 1.15em;
+}
+
+.Editor-box {
+  flex: 0 0 auto;
+  padding: 10px;
+  min-height: 200px;
+  white-space: nowrap;
+  color: white;
+}
+
+.Send-button {
+  margin: 10px;
+}

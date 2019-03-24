@@ -30,3 +30,24 @@ export function get_lesson(id, resultHandler) {
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 }
+
+export function add_lesson(title, text) {
+  var xmlhttp = new XMLHttpRequest();
+  var url = ServerAddress + "/lessons/add";
+  xmlhttp.open("POST", url, true);
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      console.log("Hello! :D");
+      console.log(this.responseText);
+    }
+    else {
+      console.log("Bye... :( " + this.readyState + ' ' + this.status);
+    }
+  }
+  xmlhttp.send(JSON.stringify(
+    {
+      title: title,
+      text: text,
+    }
+  ));
+}

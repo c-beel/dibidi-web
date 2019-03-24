@@ -11,15 +11,14 @@ export class Lesson extends React.Component {
       title: "",
       text: "",
     };
-    var thisClass = this;
     get_lesson(props.match.params.lesson_id, function(lesson) {
-      thisClass.setState(
+      this.setState(
         {
           title:  lesson.title,
           text: lesson.text,
         }
       );
-    });
+    }.bind(this));
   }
 
   render() {
