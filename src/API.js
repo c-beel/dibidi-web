@@ -31,7 +31,7 @@ export function get_lesson(id, resultHandler) {
   xmlhttp.send();
 }
 
-export function add_lesson(title, text) {
+export function add_lesson(data) {
   var xmlhttp = new XMLHttpRequest();
   var url = ServerAddress + "/lessons/add";
   xmlhttp.open("POST", url, true);
@@ -44,10 +44,22 @@ export function add_lesson(title, text) {
       console.log("Bye... :( " + this.readyState + ' ' + this.status);
     }
   }
-  xmlhttp.send(JSON.stringify(
-    {
-      title: title,
-      text: text,
+  xmlhttp.send(JSON.stringify(data));
+}
+
+export function edit_lesson(data) {
+  var xmlhttp = new XMLHttpRequest();
+  var url = ServerAddress + "/lessons/edit";
+  xmlhttp.open("POST", url, true);
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      console.log("Hello! :D");
+      console.log(this.responseText);
     }
-  ));
+    else {
+      console.log("Bye... :( " + this.readyState + ' ' + this.status);
+    }
+  }
+  console.log(data);
+  xmlhttp.send(JSON.stringify(data));
 }

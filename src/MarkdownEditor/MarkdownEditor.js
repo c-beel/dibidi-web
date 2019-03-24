@@ -45,7 +45,7 @@ export class MarkdownEditor extends React.Component {
     return (
       <Row className='IDE-container'>
         <Col xs="6" className='Editor-box'>
-          <Editor title={this.state.title} text={this.state.text} titleChange={ this.titleChangeHandler.bind(this) } textChange={ this.textChangeHandler.bind(this) } submitHandler={this.props.submitHandler}/>
+          <Editor lesson_id={this.props.match.params.lesson_id} title={this.state.title} text={this.state.text} titleChange={ this.titleChangeHandler.bind(this) } textChange={ this.textChangeHandler.bind(this) } submitHandler={this.props.submitHandler}/>
         </Col>
         <Col xs="6" className='Previewer-box'>
           <Previewer text={ this.state.text } title={ this.state.title } />

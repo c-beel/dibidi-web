@@ -7,7 +7,13 @@ export class Editor extends React.Component {
   onClick(event) {
     event.preventDefault();
     var form = event.target.parentElement;
-    this.props.submitHandler(form['title'].value, form['text'].value);
+    var data = {
+      title: form['title'].value,
+      text: form['text'].value,
+    };
+    if (this.props.lesson_id)
+      data.id = parseInt(this.props.lesson_id);
+    this.props.submitHandler(data);
   }
 
   render() {
