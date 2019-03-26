@@ -18,7 +18,7 @@ export class LessonsListItem extends React.Component {
         </td>
         <td width="5%">
           <StyledLink to={"/lesson/" + this.props.row_number + "/edit"}>
-            <Image src={editIcon} className="Edit-icon" alt="Edit" />
+            <Image src={editIcon} className="Edit-icon Icon" alt="Edit" />
           </StyledLink>
         </td>
       </tr>

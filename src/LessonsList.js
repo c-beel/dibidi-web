@@ -39,7 +39,7 @@ export class LessonsList extends React.Component {
         <PageTitle>
           لیست دروس
           <StyledLink to={"/lesson/add"}>
-            <Image src={newIcon} className="Add-icon" alt="New" />
+            <Image src={newIcon} className="Add-icon Icon" alt="New" />
           </StyledLink>
         </PageTitle>
         <Row>

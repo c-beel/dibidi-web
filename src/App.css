@@ -75,6 +75,14 @@
   margin: 10px;
 }
 
+.Icon:hover {
+  filter: contrast(500%);
+}
+
+.Icon:active {
+  filter: contrast(50%);
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(180deg); }
