@@ -36,12 +36,11 @@ export function add_lesson(data) {
   var url = ServerAddress + "/lessons/add";
   xmlhttp.open("POST", url, true);
   xmlhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      console.log("Hello! :D");
-      console.log(this.responseText);
-    }
-    else {
-      console.log("Bye... :( " + this.readyState + ' ' + this.status);
+    if (this.readyState === 4) {
+      if (this.status === 200)
+        return JSON.parse(this.responseText);
+      else
+        return {"error": "Can't add this lesson. :( please call admins."}
     }
   }
   xmlhttp.send(JSON.stringify(data));
@@ -52,14 +51,12 @@ export function edit_lesson(data) {
   var url = ServerAddress + "/lessons/edit";
   xmlhttp.open("POST", url, true);
   xmlhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      console.log("Hello! :D");
-      console.log(this.responseText);
-    }
-    else {
-      console.log("Bye... :( " + this.readyState + ' ' + this.status);
+    if (this.readyState === 4) {
+      if (this.status === 200)
+        return JSON.parse(this.responseText);
+      else
+        return {"error": "Can't add this lesson. :( please call admins."}
     }
   }
-  console.log(data);
   xmlhttp.send(JSON.stringify(data));
 }
