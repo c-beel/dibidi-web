@@ -31,31 +31,31 @@ export function get_lesson(id, resultHandler) {
   xmlhttp.send();
 }
 
-export function add_lesson(data) {
+export function add_lesson(data, ok=function(xh){}, nok=function(xh){}) {
   var xmlhttp = new XMLHttpRequest();
   var url = ServerAddress + "/lessons/add";
   xmlhttp.open("POST", url, true);
   xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4) {
       if (this.status === 200)
-        return JSON.parse(this.responseText);
+        ok(this);
       else
-        return {"error": "Can't add this lesson. :( please call admins."}
+        nok(this);
     }
   }
   xmlhttp.send(JSON.stringify(data));
 }
 
-export function edit_lesson(data) {
+export function edit_lesson(data, ok=function(xh){}, nok=function(xh){}) {
   var xmlhttp = new XMLHttpRequest();
   var url = ServerAddress + "/lessons/edit";
   xmlhttp.open("POST", url, true);
   xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4) {
       if (this.status === 200)
-        return JSON.parse(this.responseText);
+        ok(this);
       else
-        return {"error": "Can't add this lesson. :( please call admins."}
+        nok(this);
     }
   }
   xmlhttp.send(JSON.stringify(data));

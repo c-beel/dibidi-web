@@ -13,7 +13,8 @@ export class Editor extends React.Component {
     };
     if (this.props.lesson_id)
       data.id = parseInt(this.props.lesson_id, 10);
-    this.props.submitHandler(data);
+    var history = this.props.history;
+    this.props.submitHandler(history)(data);
   }
 
   render() {
