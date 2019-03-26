@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { get_lesson } from './API.js';
 import { PageTitle } from './PageTitle';
 import { EditLessonIcon } from './EditLessonIcon';
+import { HomeIcon } from './HomeIcon';
 import './App.css';
 
 export class Lesson extends React.Component {
@@ -31,6 +32,7 @@ export class Lesson extends React.Component {
         <PageTitle>
           { this.state.title }
           <EditLessonIcon lesson_id={this.props.match.params.lesson_id} />
+          <HomeIcon />
         </PageTitle>
         <ReactMarkdown source={ this.state.text } className="Lesson-text" />
       </div>

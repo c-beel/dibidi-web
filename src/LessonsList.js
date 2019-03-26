@@ -7,7 +7,6 @@ import { Table, Row, Container } from 'reactstrap';
 import { Image } from 'react-bootstrap';
 import { StyledLink } from './StyledLink';
 import { NewLessonIcon } from './NewLessonIcon';
-import newIcon from './static/icons/new.png';
 import './App.css';
 
 export class LessonsList extends React.Component {
