@@ -6,6 +6,7 @@ import { get_lessons_list } from './API.js';
 import { Table, Row, Container } from 'reactstrap';
 import { Image } from 'react-bootstrap';
 import { StyledLink } from './StyledLink';
+import { NewLessonIcon } from './NewLessonIcon';
 import newIcon from './static/icons/new.png';
 import './App.css';
 
@@ -40,9 +41,7 @@ export class LessonsList extends React.Component {
       <Container fluid>
         <PageTitle>
           لیست دروس
-          <StyledLink to={"/lesson/add"}>
-            <Image src={newIcon} className="Add-icon Icon" alt="New" />
-          </StyledLink>
+          <NewLessonIcon />
         </PageTitle>
         <Row>
           <Table className="Lessons-table" hover borderless striped dark>

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
+import { EditLessonIcon } from './EditLessonIcon';
 import { StyledLink } from './StyledLink';
-import editIcon from './static/icons/edit.png';
 import './App.css';
 
 export class LessonsListItem extends React.Component {
@@ -17,9 +16,7 @@ export class LessonsListItem extends React.Component {
           </StyledLink>
         </td>
         <td width="5%">
-          <StyledLink to={"/lesson/" + this.props.row_number + "/edit"}>
-            <Image src={editIcon} className="Edit-icon Icon" alt="Edit" />
-          </StyledLink>
+          <EditLessonIcon lesson_id={this.props.row_number} />
         </td>
       </tr>
     )
