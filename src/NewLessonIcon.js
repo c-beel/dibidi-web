@@ -6,7 +6,7 @@ import newIcon from './static/icons/new.png';
 export function NewLessonIcon(props) {
   return (
     <StyledLink to={"/lesson/add"}>
-      <Image src={newIcon} className="Add-icon Icon" alt="New" />
+      <Image src={newIcon} className="Icon" alt="New" />
     </StyledLink>
   )
 }
