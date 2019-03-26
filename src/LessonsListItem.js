@@ -1,5 +1,6 @@
 import React from 'react';
 import { EditLessonIcon } from './EditLessonIcon';
+import { DeleteLessonIcon } from './DeleteLessonIcon';
 import { StyledLink } from './StyledLink';
 import './App.css';
 
@@ -15,8 +16,9 @@ export class LessonsListItem extends React.Component {
             </button>
           </StyledLink>
         </td>
-        <td width="5%">
+        <td width="10%">
           <EditLessonIcon lesson_id={this.props.row_number} />
+          <DeleteLessonIcon lesson_id={this.props.row_number} />
         </td>
       </tr>
     )
