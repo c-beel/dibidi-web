@@ -11,7 +11,10 @@ export class Lesson extends React.Component {
       title: "",
       text: "",
     };
-    get_lesson(props.match.params.lesson_id, function(lesson) {
+  }
+
+  componentDidMount() {
+    get_lesson(this.props.match.params.lesson_id, function(lesson) {
       this.setState(
         {
           title:  lesson.title,

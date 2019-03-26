@@ -9,8 +9,15 @@ import './MarkdownEditor.css';
 export class MarkdownEditor extends React.Component {
   constructor(props) {
     super();
-    if (props.match.params.lesson_id) {
-      get_lesson(props.match.params.lesson_id, function(lesson) {
+    this.state = {
+      title: "",
+      text: "",
+    }
+  }
+
+  componentDidMount() {
+    if (this.props.match.params.lesson_id) {
+      get_lesson(this.props.match.params.lesson_id, function(lesson) {
         this.setState(
           {
             title:  lesson.title,
@@ -18,10 +25,6 @@ export class MarkdownEditor extends React.Component {
           }
         );
       }.bind(this));
-    }
-    this.state = {
-      title: "",
-      text: "",
     }
   }
 

@@ -12,7 +12,7 @@ export class Editor extends React.Component {
       text: form['text'].value,
     };
     if (this.props.lesson_id)
-      data.id = parseInt(this.props.lesson_id);
+      data.id = parseInt(this.props.lesson_id, 10);
     this.props.submitHandler(data);
   }
 

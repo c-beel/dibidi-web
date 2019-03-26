@@ -12,11 +12,13 @@ import './App.css';
 export class LessonsList extends React.Component {
   constructor(props) {
     super();
-    this.state = {tbody: []};
-    var thisClass = this;
+    this.state = {lessons: []};
+  }
+
+  componentDidMount() {
     get_lessons_list(function(items) {
-      thisClass.set_items(items);
-    });
+      this.set_items(items);
+    }.bind(this));
   }
 
   render_item(item) {
@@ -26,7 +28,7 @@ export class LessonsList extends React.Component {
   set_items(items) {
     this.setState(
       {
-        tbody: items.map(
+        lessons: items.map(
           (item) => <LessonsListItem key={item.id} row_number={item.id} title={item.title} />
         )
       }
@@ -44,7 +46,7 @@ export class LessonsList extends React.Component {
         </PageTitle>
         <Row>
           <Table className="Lessons-table" hover borderless striped dark>
-            <tbody>{this.state.tbody}</tbody>
+            <tbody>{this.state.lessons}</tbody>
           </Table>
         </Row>
       </Container>
